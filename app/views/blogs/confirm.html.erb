@@ -1,0 +1,9 @@
+<div class="content">
+  <%= form_with(model: @blog, url:blogs_path, local: true) do |form| %>
+    <%= form.hidden_field :content %>
+    <h3>
+      本文： <%= @blog.content %>
+    </h3>
+    <%= form.submit "登録する" %>
+  <% end %>
+</div>
